@@ -15,6 +15,7 @@ export default class StoreService {
 
   incrementStore() {
     let store = this.#store$.value;
-    this.#store$.next(store + 1);
+    store++;
+    this.#store$.next(store);
   }
 }
