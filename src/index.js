@@ -1,15 +1,20 @@
 import { BehaviorSubject } from 'rxjs';
 
-export default class Store {
-  #store = new BehaviorSubject(0);
+export default class StoreService {
+  #store$ = new BehaviorSubject(0);
 
   constructor() {}
 
-  set storeValue(value) {
-    this.#store.next(value);
+  set store(value) {
+    this.#store$.next(value);
   }
 
-  get storeValue() {
-    return this.#store;
+  get store() {
+    return this.#store$.asObservable();
+  }
+
+  incrementStore() {
+    let store = this.#store$.value;
+    this.#store$.next(store + 1);
   }
 }
