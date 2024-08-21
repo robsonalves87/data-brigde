@@ -12,7 +12,6 @@ describe('Store', () => {
   it('insert and get the value with subscribe', async () => {
     store.storeValue = store.storeValue.value + 1;
     let result;
-    let subscription;
 
     await new Promise((resolve) => {
       subscription = store.storeValue.pipe(take(1)).subscribe((value) => {
