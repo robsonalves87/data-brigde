@@ -1,7 +1,7 @@
 import { take } from 'rxjs';
-import StoreService from './index';
+import StoreService from './store-service';
 
-describe('Store', () => {
+describe('StoreService', () => {
   let storeService = new StoreService();
 
   it('insert and get the value with subscribe', async () => {

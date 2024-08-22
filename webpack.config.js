@@ -4,8 +4,8 @@ module.exports = {
   mode: 'production',
   entry: './index.js',
   output: {
-    path: path.join(__dirname, 'lib'),
-    filename: 'nosbor-data-brigde2.min.js',
+    path: path.join(__dirname, 'dist'),
+    filename: 'index.min.js',
     libraryTarget: 'umd',
     library: 'DataBrigde',
   },
@@ -19,6 +19,6 @@ module.exports = {
     ],
   },
   devServer: {
-    contentBase: [path.join(__dirname, 'example'), path.join(__dirname, 'lib')],
+    contentBase: [path.join(__dirname, 'example'), path.join(__dirname, 'dist')],
   },
 };
